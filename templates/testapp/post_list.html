@@ -1,0 +1,12 @@
+{%extends 'testapp/base.html'%}
+{% block title_block%}Reyaj's Blog Home Page{%endblock%}
+
+{% block content%}
+    <h1>Reyaj's Blog</h1>
+    {%for post in post_list%}
+    <a href="{{post.get_absolute_url}}"><h2>{{post.title}}</h2></a>
+    <p id="date">Pubished On {{post.publish}} By {{post.author|title}}</p>
+    {{post.body|linebreaks}}
+
+{%endfor%}
+{%endblock%}
