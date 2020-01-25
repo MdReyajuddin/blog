@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import Post, Like
 from django.http import HttpResponse
 # Create your views here.
-#DataFlair #AJAX_tutorial
+#Reyaj #AJAX_tutorial
 
 def index(request):
     posts = Post.objects.all()
